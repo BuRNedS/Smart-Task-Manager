@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Task Manager</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <h1>Smart Task Manager</h1>
+  <nav>
+    <a href="#" aria-label="Home">Home</a>
+    <a href="#" aria-label="My Tasks">My Tasks</a>
+    <a href="#" aria-label="Profile">Profile</a>
+    <a href="#" aria-label="Reports">Reports</a>
+  </nav>
+</header>
+
+<main>
+  <section>
+    <h2>Add a New Task</h2>
+    <form id="task-form">
+      <label for="task-title">Title <span style="color: red;">*</span></label>
+      <input type="text" id="task-title" name="title" placeholder="Enter task title" required>
+
+      <label for="task-desc">Description</label>
+      <textarea id="task-desc" name="description" placeholder="Enter task description"></textarea>
+
+      <label for="task-date">Due Date <span style="color: red;">*</span></label>
+      <input type="date" id="task-date" name="due-date" required>
+
+      <label for="task-priority">Priority</label>
+      <select id="task-priority" name="priority">
+        <option value="Low">Low</option>
+        <option value="Medium">Medium</option>
+        <option value="High">High</option>
+      </select>
+
+      <button type="submit">Add Task</button>
+    </form>
+  </section>
+
+  <section class="task-list">
+    <h2>Task List</h2>
+    <ul id="task-list-placeholder">
+      <li>No tasks added yet.</li>
+    </ul>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2025 Smart Task Manager. All rights reserved. | Contact: info@smarttaskmanager.com</p>
+</footer>
+
+<script src="tasks.js"></script>
+</body>
+</html>

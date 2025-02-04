@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+header, footer {
+  background-color: #2c3e50;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+header nav a {
+  color: white;
+  margin: 0 1rem;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  padding: 2rem;
+}
+
+form {
+  max-width: 600px;
+  margin: 0 auto 2rem auto;
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+form input, form textarea, form select {
+  width: 90%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+form button {
+  background-color: #3498db;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+form button:hover {
+  background-color: #2980b9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.task-list {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.task-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.task-list li,
+.task-item {
+  background: #fff;
+  padding: 1.2rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-left: 6px solid transparent;
+  transition: transform 0.2s;
+}
+
+.task-list li:hover,
+.task-item:hover {
+  transform: translateY(-4px);
+}
+
+.task-list li.low,
+.task-item.low {
+  border-color: #27ae60; /* Green for Low priority */
+}
+
+.task-list li.medium,
+.task-item.medium {
+  border-color: #f1c40f; /* Yellow for Medium priority */
+}
+
+.task-list li.high,
+.task-item.high {
+  border-color: #e74c3c; /* Red for High priority */
+}
+
+.task-item.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+@media (max-width: 600px) {
+  form input, form textarea, form select {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+
+  form button {
+    width: 100%;
+    padding: 0.7rem;
+  }
+
+  .task-list {
+    padding: 0 1rem;
+  }
+}
